@@ -7,7 +7,6 @@ set(CMAKE_CXX_FLAGS "-O2")
 set(CMAKE_VERBOSE_MAKEFILE ON)
 
 find_package(OpenMP)
-
 find_package(MKL REQUIRED)
 
 get_target_property(MKL_INCLUDE_DIRS MKL::MKL INTERFACE_INCLUDE_DIRECTORIES)
@@ -42,3 +41,9 @@ foreach(TARGET ${TARGETS})
     target_compile_options(${TARGET} PRIVATE ${MKL_INCLUDE_DIRS} ${OpenMP_CXX_FLAGS})
     target_link_libraries(${TARGET} PRIVATE ${OpenMP_CXX_LIBRARIES} mkl_intel_ilp64 mkl_sequential mkl_core pthread m dl)
 endforeach()
+
+
+# exercise and answer #
+
+# add_subdirectory(exercise)
+add_subdirectory(answer)

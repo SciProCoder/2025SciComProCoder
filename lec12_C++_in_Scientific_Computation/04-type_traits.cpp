@@ -1,10 +1,3 @@
-/*
- * @Author: Ning Zhang
- * @Date: 2024-11-29 19:43:21
- * @Last Modified by: Ning Zhang
- * @Last Modified time: 2024-12-01 13:34:31
- */
-
 #include <iostream>
 #include <type_traits>
 

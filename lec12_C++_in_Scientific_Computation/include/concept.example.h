@@ -1,10 +1,3 @@
-/*
- * @Author: Ning Zhang
- * @Date: 2024-05-23 13:49:43
- * @Last Modified by: Ning Zhang
- * @Last Modified time: 2024-11-29 19:49:38
- */
-
 #pragma once
 
 #include "basic.h"

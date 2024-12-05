@@ -1,10 +1,3 @@
-/*
- * @Author: Ning Zhang
- * @Date: 2024-05-23 12:50:32
- * @Last Modified by: Ning Zhang
- * @Last Modified time: 2024-12-01 10:48:21
- */
-
 #include "./include/polymorphism_example.h"
 
 int main()
