@@ -1,10 +1,3 @@
-/*
- * @Author: Ning Zhang
- * @Date: 2024-12-01 10:35:33
- * @Last Modified by: Ning Zhang
- * @Last Modified time: 2024-12-01 13:34:28
- */
-
 #include "./include/polymorphism_example.h"
 
 namespace Example1 {
@@ -15,7 +8,7 @@ inline void AXPY(const MKL_INT n, const double a, const double *x, const MKL_INT
 }
 
 template <typename T>
-requires (!std::is_same_v<T, double>)
+    requires(!std::is_same_v<T, double>)
 void AXPY(const int n, const T a, const T *x, const int incx, T *y, const int incy)
 {
     std::cout << "Template AXPY of type 1" << std::endl;
@@ -26,7 +19,7 @@ void AXPY(const int n, const T a, const T *x, const int incx, T *y, const int in
 }
 
 template <typename T1, typename T2>
-requires (!std::is_same_v<T1, T2>)
+    requires(!std::is_same_v<T1, T2>)
 void AXPY(const int n, const T1 a, const T2 *x, const int incx, T2 *y, const int incy)
 {
     std::cout << "Template AXPY of type 2" << std::endl;
@@ -49,7 +42,7 @@ void AXPY(const int n, const T a, const T *x, const int incx, T *y, const int in
     }
 }
 template <typename T1, typename T2>
-requires (!std::is_same_v<T1, T2>)
+    requires(!std::is_same_v<T1, T2>)
 void AXPY(const int n, const T1 a, const T2 *x, const int incx, T2 *y, const int incy)
 {
     std::cout << "Template AXPY of type 2" << std::endl;
@@ -59,6 +52,12 @@ void AXPY(const int n, const T1 a, const T2 *x, const int incx, T2 *y, const int
     }
 }
 }; // namespace Example2
+
+template <typename... Args>
+void print(Args... args)
+{
+    ((std::cout << args << " "), ...) << std::endl; // C++17 折叠表达式
+}
 
 int main()
 {
@@ -96,5 +95,11 @@ int main()
         double                      alpha = 2.0;
 
         AXPY(x.size(), alpha, x.data(), 1, y.data(), 1);
+    }
+
+    {
+        print(1, 2, 3);
+        print("hello", "world");
+        print(2024, "SciComProCoder");
     }
 }

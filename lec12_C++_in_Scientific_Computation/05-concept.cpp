@@ -1,10 +1,3 @@
-/*
- * @Author: Ning Zhang
- * @Date: 2024-05-23 13:44:49
- * @Last Modified by: Ning Zhang
- * @Last Modified time: 2024-05-23 14:07:25
- */
-
 #include "./include/concept.example.h"
 
 using namespace Training2024::concept_example;

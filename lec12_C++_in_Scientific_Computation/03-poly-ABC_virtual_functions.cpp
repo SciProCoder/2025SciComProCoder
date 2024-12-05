@@ -1,10 +1,3 @@
-/*
- * @Author: Ning Zhang
- * @Date: 2024-05-23 12:53:39
- * @Last Modified by: Ning Zhang
- * @Last Modified time: 2024-12-01 16:57:37
- */
-
 #include "include/polymorphism_example.h"
 
 using namespace Training2024::poly_example04;

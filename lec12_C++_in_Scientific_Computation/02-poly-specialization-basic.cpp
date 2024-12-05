@@ -1,10 +1,3 @@
-/*
- * @Author: Ning Zhang
- * @Date: 2024-12-01 10:35:33
- * @Last Modified by: Ning Zhang
- * @Last Modified time: 2024-12-01 11:10:42
- */
-
 #include "./include/polymorphism_example.h"
 
 namespace Example1 {
