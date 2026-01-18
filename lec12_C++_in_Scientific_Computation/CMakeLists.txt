@@ -8,6 +8,15 @@ set(CMAKE_VERBOSE_MAKEFILE ON)
 
 find_package(OpenMP)
 find_package(MKL REQUIRED)
+if(MKL_FOUND)
+    message(STATUS "MKL found.")
+    include_directories(${MKL_INCLUDE_DIRS})
+    set(BLAS_LIBS ${MKL_LIBRARIES})
+    add_definitions(-DMKL_ILP64)
+    add_definitions(-D_MKL_)
+else()
+    message(FATAL_ERROR "MKL not found. Please make sure MKL is installed and available.")
+endif()
 
 get_target_property(MKL_INCLUDE_DIRS MKL::MKL INTERFACE_INCLUDE_DIRECTORIES)
 
