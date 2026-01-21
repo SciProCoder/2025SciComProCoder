@@ -57,7 +57,7 @@ inline void PRINT_SCALAR<float>(const float _input)
 template <>
 inline void PRINT_SCALAR<complex_float>(const complex_float _input)
 {
-    printf("%15.8f + %15.8f ", _input.real(), _input.imag());
+    printf("%15.8f + %15.8f j", _input.real(), _input.imag());
 }
 template <>
 inline void PRINT_SCALAR<complex_double>(const complex_double _input)
